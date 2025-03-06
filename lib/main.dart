@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:auth_using_firbase_riverpod/auth/presentation/forget_password.dart';
 import 'package:auth_using_firbase_riverpod/auth/presentation/sign_in_screen.dart';
 import 'package:auth_using_firbase_riverpod/auth/presentation/sign_up_screen.dart';
@@ -5,9 +7,13 @@ import 'package:auth_using_firbase_riverpod/core/widget/custom_button.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
+import 'firebase_options.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 

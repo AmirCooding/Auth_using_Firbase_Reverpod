@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ForgetPassword extends StatefulWidget {
+  const ForgetPassword({super.key});
+
   @override
   State<ForgetPassword> createState() => _ForgetPasswordState();
 }
@@ -13,18 +15,19 @@ class _ForgetPasswordState extends State<ForgetPassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      appBar: AppBar(
+        title: const Text("Forget Password"),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 50),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Forget Password Screen"),
-            SizedBox(height: 40),
             CustomTextField(
                 hintText: "Enter your Email...",
                 labelText: "Email",
                 controller: controller,
                 prefixIcon: Icon(CupertinoIcons.mail)),
-            SizedBox(height: 40),
+            SizedBox(height: 30),
             CustomButton(text: "Send Email", onPressed: () {}),
           ],
         ),

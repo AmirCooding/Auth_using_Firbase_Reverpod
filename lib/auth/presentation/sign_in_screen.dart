@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SignInScreen extends StatefulWidget {
+  const SignInScreen({super.key});
+
   @override
   State<SignInScreen> createState() => _SignInScreenState();
 }
@@ -15,11 +17,13 @@ class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Sign In"),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Sign In Screen"),
             SizedBox(height: 20),
             CustomTextField(
                 hintText: "Enter your Email...",
@@ -34,22 +38,25 @@ class _SignInScreenState extends State<SignInScreen> {
                 prefixIcon: Icon(CupertinoIcons.lock)),
             SizedBox(height: 40),
             CustomButton(text: "Sign In", onPressed: () {}),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                TextButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/forgetpassword');
-                  },
-                  child: Text("forget password?"),
-                ),
-                TextButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/signUp');
-                  },
-                  child: Text("Sign Up"),
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/forgetpassword');
+                    },
+                    child: Text("forget password?"),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/signup');
+                    },
+                    child: Text("Sign Up"),
+                  ),
+                ],
+              ),
             ),
           ],
         ),

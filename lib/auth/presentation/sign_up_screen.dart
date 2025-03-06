@@ -18,31 +18,33 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: const Text("Sign Up"),
+        ),
         body: Center(
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-          const Text('Sign Up Screen'),
-          SizedBox(height: 40),
-          CustomTextField(
-              hintText: "Enter email...",
-              labelText: "Email",
-              controller: emailController,
-              prefixIcon: Icon(CupertinoIcons.mail)),
-          SizedBox(height: 20),
-          CustomTextField(
-              hintText: "Enter Password...",
-              labelText: "Password",
-              controller: passwordController,
-              prefixIcon: Icon(CupertinoIcons.lock)),
-          SizedBox(height: 20),
-          CustomTextField(
-              hintText: "Confirm Password...",
-              labelText: "confirm password",
-              controller: confirmPasswordController,
-              prefixIcon: Icon(CupertinoIcons.lock)),
-          SizedBox(height: 30),
-          CustomButton(text: "Sign up", onPressed: () {}),
-        ])));
+              SizedBox(height: 40),
+              CustomTextField(
+                  hintText: "Enter email...",
+                  labelText: "Email",
+                  controller: emailController,
+                  prefixIcon: Icon(CupertinoIcons.mail)),
+              SizedBox(height: 20),
+              CustomTextField(
+                  hintText: "Enter Password...",
+                  labelText: "Password",
+                  controller: passwordController,
+                  prefixIcon: Icon(CupertinoIcons.lock)),
+              SizedBox(height: 20),
+              CustomTextField(
+                  hintText: "Confirm Password...",
+                  labelText: "Confirm Password",
+                  controller: confirmPasswordController,
+                  prefixIcon: Icon(CupertinoIcons.lock)),
+              SizedBox(height: 30),
+              CustomButton(text: "Sign up", onPressed: () {}),
+            ])));
   }
 }
