@@ -72,4 +72,12 @@ void main() {
     await mockFirebaseAuth.signOut();
     verify(mockFirebaseAuth.signOut()).called(1);
   });
+
+  test("Send password reset email should return null", () async {
+    when(mockFirebaseAuth.sendPasswordResetEmail(email: "test@example.com"))
+        .thenAnswer((_) => Future.value());
+    await mockFirebaseAuth.sendPasswordResetEmail(email: "test@example.com");
+    verify(mockFirebaseAuth.sendPasswordResetEmail(email: "test@example.com"))
+        .called(1);
+  });
 }

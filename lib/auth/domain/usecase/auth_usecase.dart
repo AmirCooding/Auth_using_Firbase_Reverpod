@@ -18,4 +18,8 @@ class AuthUsecase {
   Future<void> logout() async {
     return await _authRepository.signOut();
   }
+
+  Future<void> sendPasswordResetEmail(String email) async {
+    return await _authRepository.sendPasswordResetEmail(email);
+  }
 }

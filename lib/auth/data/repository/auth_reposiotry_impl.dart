@@ -20,4 +20,9 @@ class AuthReposiotryImpl extends AuthRepository {
   Future<User?> signUpWithEmailAndPassword(UserModel user) {
     return firebaseService.signUpWithEmailAndPassword(user);
   }
+
+  @override
+  Future<void> sendPasswordResetEmail(String email) {
+    return firebaseService.sendPasswordResetEmail(email);
+  }
 }

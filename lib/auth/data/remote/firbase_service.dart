@@ -18,6 +18,14 @@ class FirebaseService {
     }
   }
 
+  Future<void> sendPasswordResetEmail(String email) async {
+    try {
+      await firebaseAuth.sendPasswordResetEmail(email: email);
+    } on FirebaseAuthException catch (e) {
+      throw Exception(e.message);
+    }
+  }
+
   Future<User?> signUpWithEmailAndPassword(UserModel user) async {
     try {
       final UserCredential userCredential =
