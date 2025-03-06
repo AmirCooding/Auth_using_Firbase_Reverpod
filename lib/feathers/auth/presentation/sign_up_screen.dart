@@ -3,18 +3,15 @@ import 'package:auth_using_firbase_riverpod/core/widget/custom_text_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({super.key});
-
-  @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
-}
-
-class _SignUpScreenState extends State<SignUpScreen> {
+class SignUpScreen extends StatelessWidget {
+  SignUpScreen({super.key});
   final TextEditingController emailController = TextEditingController();
+
   final TextEditingController passwordController = TextEditingController();
+
   final TextEditingController confirmPasswordController =
       TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

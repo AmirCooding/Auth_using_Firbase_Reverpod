@@ -1,8 +1,8 @@
 import 'dart:developer';
 
-import 'package:auth_using_firbase_riverpod/auth/presentation/forget_password.dart';
-import 'package:auth_using_firbase_riverpod/auth/presentation/sign_in_screen.dart';
-import 'package:auth_using_firbase_riverpod/auth/presentation/sign_up_screen.dart';
+import 'package:auth_using_firbase_riverpod/feathers/auth/presentation/forget_password.dart';
+import 'package:auth_using_firbase_riverpod/feathers/auth/presentation/sign_in_screen.dart';
+import 'package:auth_using_firbase_riverpod/feathers/auth/presentation/sign_up_screen.dart';
 import 'package:auth_using_firbase_riverpod/core/widget/custom_button.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';

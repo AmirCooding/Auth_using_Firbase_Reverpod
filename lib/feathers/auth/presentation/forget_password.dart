@@ -3,15 +3,11 @@ import 'package:auth_using_firbase_riverpod/core/widget/custom_text_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ForgetPassword extends StatefulWidget {
-  const ForgetPassword({super.key});
+class ForgetPassword extends StatelessWidget {
+  ForgetPassword({super.key});
 
-  @override
-  State<ForgetPassword> createState() => _ForgetPasswordState();
-}
-
-class _ForgetPasswordState extends State<ForgetPassword> {
   final TextEditingController controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

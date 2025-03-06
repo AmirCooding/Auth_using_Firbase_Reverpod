@@ -1,5 +1,5 @@
-import 'package:auth_using_firbase_riverpod/auth/data/model/user_model.dart';
-import 'package:auth_using_firbase_riverpod/auth/domain/repository/auth_repository.dart';
+import 'package:auth_using_firbase_riverpod/feathers/auth/data/model/user_model.dart';
+import 'package:auth_using_firbase_riverpod/feathers/auth/domain/repository/auth_repository.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthUsecase {
